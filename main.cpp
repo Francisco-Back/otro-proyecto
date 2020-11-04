@@ -63,4 +63,9 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		DispatchMessage(&msg); /* Send it to WndProc */
 	}
 	return msg.wParam;
+		if(hwnd == NULL) {
+		MessageBox(NULL, "Window Creation Failed!","Error!",MB_ICONEXCLAMATION|MB_OK);
+		return 0;
+	}
+
 }
